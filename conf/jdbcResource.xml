@@ -8,7 +8,7 @@
             org.postgresql.Driver
         </className>
         <url>
-            jdbc:postgresql://moomin:5431/syncdb1
+            jdbc:postgresql://oracle2:5432/syncdb1
         </url>
         <username>
             syncdbuser
@@ -25,7 +25,7 @@
             org.postgresql.Driver
         </className>
         <url>
-            jdbc:postgresql://moomin:5431/syncdb2
+            jdbc:postgresql://oracle2:5432/syncdb2
         </url>
         <username>
             syncdbuser
@@ -42,13 +42,13 @@
             oracle.jdbc.driver.OracleDriver
         </className>
         <url>
-            jdbc:oracle:thin:@lesslog:1521:syncdb
+            jdbc:oracle:thin:@oracle2:1521:orcl
         </url>
         <username>
-            syncdb
+            USER1
         </username>
         <password>
-            syncdb
+            USER1
         </password>
     </jdbcResource>
     

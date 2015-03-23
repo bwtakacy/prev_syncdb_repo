@@ -56,7 +56,7 @@
 
 	<!-- compile -->
 	<target name="compile" depends="prepare" description="compile all sources">
-		<javac srcdir="${build.src}" destdir="${build.dest}" encoding="UTF-8" classpathref="build.classpath" includeantruntime="no">
+		<javac srcdir="${build.src}" destdir="${build.dest}" debug="true" encoding="UTF-8" classpathref="build.classpath" includeantruntime="no">
 		</javac>
 		<copy todir="${build.dest}">
 			<fileset dir="${build.src}">
@@ -72,7 +72,7 @@
 
 	<!-- testset compile -->
 	<target name="test_compile" depends="test_prepare, compile" description="test comile all sources">
-		<javac srcdir="${test.src}" destdir="${test.dest}" encoding="UTF-8" classpathref="test.classpath" includeantruntime="no">
+		<javac srcdir="${test.src}" destdir="${test.dest}" debug="true" encoding="UTF-8" classpathref="test.classpath" includeantruntime="no">
 		</javac>
 	</target>
 
@@ -146,7 +146,7 @@
 		<exec executable="data/init_mlog_postgresql.sh" />
 
 		<!-- execute test -->
-		<junit printsummary="yes" haltonfailure="no" showoutput="on">
+		<junit printsummary="yes" haltonfailure="yes" showoutput="on">
 			<formatter type="xml" />
 			<classpath refid="test.classpath" />
 			<batchtest fork="no" todir="${test.reports}">

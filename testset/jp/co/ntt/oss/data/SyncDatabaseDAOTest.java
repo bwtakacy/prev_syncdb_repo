@@ -932,9 +932,9 @@ public class SyncDatabaseDAOTest {
 			assertEquals("\"pK_2\"", PKNames.get(Short.valueOf((short) 2)));
 			assertEquals("\"pk_1\"", PKNames.get(Short.valueOf((short) 3)));
 
-			PKNames = SyncDatabaseDAO.getPKNames(oraConn, "SYNCDB", "FOO");
-			assertEquals(1, PKNames.size());
-			assertEquals("\"VAL1\"", PKNames.get(Short.valueOf((short) 1)));
+			//PKNames = SyncDatabaseDAO.getPKNames(oraConn, "SYNCDB", "FOO");
+			//assertEquals(1, PKNames.size());
+			//assertEquals("\"VAL1\"", PKNames.get(Short.valueOf((short) 1)));
 		} catch (Exception e) {
 			fail("exception thrown");
 		}
